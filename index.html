@@ -19,6 +19,19 @@
         <script src="js/scripts.js" defer></script> <!--isoo faz com que não precise por o script no final do body-->
     </head>
 <body>
-    <h1>To Do List</h1>
+    <div class="todo-container">
+       <header>
+            <h1>To Do List</h1>
+       </header> 
+       <form id="todo-form">
+            <p>Adicione a sua tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="todo-input" placeholder="O que você vai fazer?">
+                <button type="submit">
+                    <i class="fa-thin fa-plus"></i>
+                </button>
+            </div>
+       </form>
+    </div>
 </body>
 </html>
