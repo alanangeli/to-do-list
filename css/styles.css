@@ -29,9 +29,20 @@ button {
 
 button:hover {
     background-color: #102F5e;
+    color: #FFF;
 
 }
 
 button:hover > i {
     color: #FFF;
+}
+
+button i {
+    color: #102F5e;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+input, select {
+    padding: 0.25rem 0.5rem;
 }
