@@ -33,7 +33,7 @@ const saveTodo = (text) => {
 
     todoList.appendChild(todo);
     todoInput.value = ""; //apaga o texto depois de criado a lista
-    todoInput.focus();
+    todoInput.focus(); //seguirá ordem decrescente as tarefas, sendo a primeira no topo da lista
 };
 
 //Eventos
@@ -44,7 +44,23 @@ todoForm.addEventListener("submit", (e) => {
 
     if(inputValue) {
         //console.log(inputValue);
-        saveTodo(inputValue);
-        
+        saveTodo(inputValue);   
     }
 })
+
+document.addEventListener("click", (e) => {
+    const targetEl = e.target;
+    const parentEl = targetEl.closest("div"); //seleciona a div mais próxima
+
+    if(targetEl.classList.contains("finish-todo")){
+        parentEl.classList.toggle("done");
+    }
+
+    if(targetEl.classList.contains("remove-todo")){
+        parentEl.remove();
+    }
+
+    if(targetEl.classList.contains("edit-todo")){
+        parentEl.remove();
+    }
+});
