@@ -36,6 +36,12 @@ const saveTodo = (text) => {
     todoInput.focus(); //seguirá ordem decrescente as tarefas, sendo a primeira no topo da lista
 };
 
+const toggleForms = () => {
+    editForm.classList.toggle("hide");
+    todoForm.classList.toggle("hide");
+    todoList.classList.toggle("hide");
+}
+
 //Eventos
 todoForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -61,6 +67,6 @@ document.addEventListener("click", (e) => {
     }
 
     if(targetEl.classList.contains("edit-todo")){
-        parentEl.remove();
+        toggleForms();
     }
 });
