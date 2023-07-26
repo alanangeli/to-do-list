@@ -7,6 +7,11 @@
     box-sizing: border-box; /*faz com input não passe da alrgura máxima dos elementos pais*/
 }
 
+h1 {
+    color: #515e55;
+    font-family: sans-serif;
+}
+
 body {
     background-image: url("../img/background.jpg");
     background-position: center;
@@ -14,7 +19,7 @@ body {
 }
 
 button {
-    background-color: #FDFDFD;
+    background-color: #fdfdfd;
     color: #102F5e;
     border: 2px solid #102F5e;
     padding: .3rem .6rem;
@@ -27,8 +32,20 @@ button {
     
 }
 
-button:hover {
-    background-color: #102F5e;
+.remove-todo:hover {
+    background-color: #da0404;
+    color: #FFF;
+
+}
+
+.edit-todo:hover, .others-btn:hover, .cancel-edit-btn:hover {
+    background-color: #3b52ff;
+    color: #FFF;
+
+}
+
+.finish-todo:hover {
+    background-color: #2fda04;
     color: #FFF;
 
 }
@@ -55,7 +72,7 @@ input, select {
 .todo-container {
     max-width: 450px;
     margin: 3rem auto;
-    background-color: #FDFDFD;
+    background-color: #fdfdfd;
     padding: 1.5rem;
     border-radius: 15px;
 }
@@ -76,6 +93,7 @@ input, select {
 #todo-form p, #edit-form p {
     margin-bottom: 0.5rem;
     font-weight: bold;
+    margin-left: 6rem;
 }
 
 .form-control {
@@ -84,13 +102,14 @@ input, select {
 
 .form-control input {
     margin-right: .3rem;
+    margin-left: 5rem;
 }
 
-#cancel-edit-btn {
+
+.cancel-edit-btn {
     margin-top: 1rem;
+    margin-left: 5rem;
 }
-
-
 
 /* ToDo List*/
 .todo {
@@ -112,7 +131,7 @@ input, select {
 }
 
 .done {
-    background-color: #395169;
+    background-color: #a7bca9;
 }
 
 .done h3 {
