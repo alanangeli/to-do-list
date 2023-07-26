@@ -38,7 +38,7 @@ button {
 
 }
 
-.edit-todo:hover, .others-btn:hover, .cancel-edit-btn:hover {
+.edit-todo:hover, .others-btn:hover, #cancel-edit-btn:hover {
     background-color: #3b52ff;
     color: #FFF;
 
@@ -106,7 +106,7 @@ input, select {
 }
 
 
-.cancel-edit-btn {
+#cancel-edit-btn {
     margin-top: 1rem;
     margin-left: 5rem;
 }
